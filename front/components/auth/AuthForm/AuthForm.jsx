@@ -21,7 +21,7 @@ const AuthForm = () => {
 			{error && <p className='error'>{error}</p>}
 			<form onSubmit={handleSubmit}>
 				<div className='input-group'>
-					<label className='login-form__label' htmlFor="username">Ім'я користувача</label>
+					<label className='login-form__label' htmlFor="username">Ім&apos;я користувача</label>
 					<input
 						className='login-form__input'
 						type="text"

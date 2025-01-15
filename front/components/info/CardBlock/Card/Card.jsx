@@ -4,7 +4,7 @@ import { forwardRef } from "react";
 
 
 
-const Card = forwardRef(({ title, number, img }, ref) => {
+function Card({ title, number, img }) {
 
 	const blockAnitmation = {
 		hidden: {
@@ -22,7 +22,6 @@ const Card = forwardRef(({ title, number, img }, ref) => {
 		<motion.div initial="hidden"
 			whileInView="visible"
 			viewport={{ amount: 0, once: true }}
-			ref={ref}
 			className="card"
 
 			custom={1}
@@ -46,8 +45,6 @@ const Card = forwardRef(({ title, number, img }, ref) => {
 			</div>
 		</motion.div>
 	);
-});
+};
 
 export default Card;
-
-export const MCard = motion(Card)
