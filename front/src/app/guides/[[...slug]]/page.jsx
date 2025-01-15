@@ -22,24 +22,24 @@ export default function MasterClassPage() {
   const params = useParams();
   const { slug } = params
 
-  useEffect(() => {
-    getData("categories", setCategories);
-  }, []);
+  // useEffect(() => {
+  //   getData("categories", setCategories);
+  // }, []);
 
-  useEffect(() => {
-    if (!slug && categories.length > 0) {
-      const firstCategory = categories[0];
-      if (firstCategory?.subcategories?.length > 0) {
-        getData(
-          `categories/${firstCategory.id}/subcategory/${firstCategory.subcategories[0].id}`,
-          setGuidesData
-        );
-      }
-    }
-    if (slug) {
-      getData(`categories/${slug[0]}/subcategory/${slug[1]}`, setGuidesData);
-    }
-  }, [categories, slug]);
+  // useEffect(() => {
+  //   if (!slug && categories.length > 0) {
+  //     const firstCategory = categories[0];
+  //     if (firstCategory?.subcategories?.length > 0) {
+  //       getData(
+  //         `categories/${firstCategory.id}/subcategory/${firstCategory.subcategories[0].id}`,
+  //         setGuidesData
+  //       );
+  //     }
+  //   }
+  //   if (slug) {
+  //     getData(`categories/${slug[0]}/subcategory/${slug[1]}`, setGuidesData);
+  //   }
+  // }, [categories, slug]);
 
   return (
     <main className='main'>
