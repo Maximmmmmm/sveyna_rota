@@ -20,11 +20,26 @@ const InfoBlock = () => {
 		}),
 	}
 
-	const [slides, setSlides] = useState([]);
+	// const [slides, setSlides] = useState([]);
 
-	useEffect(e => {
-		getData("slides", setSlides)
-	}, [])
+	// useEffect(e => {
+	// 	getData("slides", setSlides)
+	// }, [])
+
+	const slides = [
+		{
+			id: 1,
+			title: "Швейна рота",
+			text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At fuga praesentium vitae, quibusdam accusantium sapiente excepturi iste dolorem maxime labore voluptatibus repellendus impedit ex maiores nihil eos, numquam incidunt cum!",
+			path: "/images/iconshveya.png"
+		},
+		{
+			id: 2,
+			title: "Швейна рота",
+			text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At fuga praesentium vitae, quibusdam accusantium sapiente excepturi iste dolorem maxime labore voluptatibus repellendus impedit ex maiores nihil eos, numquam incidunt cum!",
+			path: "/images/iconshveya.png"
+		}
+	]
 
 	return (
 		<div className="infobox">
@@ -53,7 +68,7 @@ const InfoBlock = () => {
 								<div className="left">
 									<div className="icon_shveya">
 										<Image
-											src={"http://localhost:3000/" + slide.path}
+											src={slide.path}
 											alt="logo"
 											width={356}
 											height={61}
